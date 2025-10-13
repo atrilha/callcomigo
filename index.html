@@ -4,204 +4,174 @@
   <!-- Codificação e responsividade -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- Título da aba -->
+
+  <!-- Título -->
   <title>Upsell - A Trilha</title>
 
-  <!-- Bootstrap para layout responsivo -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!-- Fontes personalizadas -->
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- ESTILOS GERAIS DA PÁGINA -->
   <style>
-    /* 🔶 Fundo da página */
+    /* 🔶 Fundo e base */
     body {
-      background-image: url("bg.png"); /* imagem de fundo da página */
-      background-size: cover; /* cobre toda a tela */
+      background-image: url("bg.png");
+      background-size: cover;
       background-position: center;
-      background-attachment: fixed; /* fixa o fundo enquanto rola */
-      background-color: #3a2d27; /* cor marrom escura base */
-      background-blend-mode: multiply; /* mistura cor e imagem */
+      background-attachment: fixed;
+      background-color: #3a2d27;
+      background-blend-mode: multiply;
       font-family: 'Montserrat', sans-serif;
-      color: #fff; /* texto branco */
+      color: #fff;
       overflow-x: hidden;
     }
 
-    /* 🔶 Barra de aviso no topo */
+    /* 🔶 Barra superior */
     nav {
-      background-color: #6a4e3a !important; /* marrom médio */
+      background-color: #6a4e3a !important;
       font-weight: 700;
       font-size: 1.1rem;
       letter-spacing: 0.5px;
     }
 
-    /* 🔶 Cabeçalhos */
+    /* 🔶 Títulos */
     h1, h2, h3, h4 {
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    /* 🔶 Título principal */
-    h1 {
-      font-size: 2.8rem;
-      color: #d9b166; /* dourado */
-      margin-bottom: 20px;
-    }
+    h1 { font-size: 2.8rem; color: #d9b166; margin-bottom: 20px; }
+    h3 { color: #f7d99e; margin-bottom: 20px; }
 
-    /* 🔶 Subtítulos */
-    h3 {
-      color: #f7d99e;
-      margin-bottom: 20px;
-    }
-
-    /* 🔶 Texto descritivo (principal dos parágrafos) */
     .lead {
       font-size: 1.2rem;
       font-weight: 500;
       line-height: 1.7;
-      color: #fff;
       margin-bottom: 25px;
+      color: #fff;
     }
 
-    /* 🔶 Destaques dourados */
-    .highlight {
-      color: #f7d99e;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+    .highlight { color: #f7d99e; font-weight: 700; text-transform: uppercase; }
+    .under { text-decoration: underline; text-underline-offset: 3px; }
+    .price { font-size: 2.4rem; font-weight: 800; color: #d9b166; margin-bottom: 20px; }
 
-    /* 🔶 Sublinhado */
-    .under {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    /* 🔶 Preço */
-    .price {
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: #d9b166;
-      margin-bottom: 20px;
-    }
-
-
-
-    /* 🔶 Texto do botão de recusa (NÃO QUERO...) */
-    #kiwify-upsell-cancel-trigger {
-      color: #e2c9a0;
-      margin-top: 15px;
-      cursor: pointer;
-      text-decoration: underline;
-      font-size: 1rem;
-    }
-
-    /* 🔶 Texto final */
     .footer-note {
       color: #e8d9c1;
       font-size: 1.1rem;
       margin-top: 30px;
     }
 
-    /* 🔶 Caixa principal do conteúdo */
     .box {
-      background-color: rgba(74, 54, 38, 0.9); /* fundo translúcido marrom */
+      background-color: rgba(74, 54, 38, 0.9);
       border-radius: 20px;
       padding: 50px 30px;
       box-shadow: 0 0 40px rgba(0,0,0,0.4);
       text-align: center;
     }
 
-    /* 🔶 RESPONSIVIDADE (Tablet e Celular) */
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      .lead { font-size: 1.05rem; }
-      .btn-primary { font-size: 1.1rem; padding: 15px 30px; }
-      .price { font-size: 2rem; }
-      .box { padding: 40px 20px; margin: 0 10px; }
-      nav span { font-size: 0.95rem; padding: 10px; display: block; }
+    /* 🔶 Botão Kiwify e botão secundário */
+    .cta-btn {
+      background-color: #27AF60;
+      border: 1px solid #27AF60;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 6px;
+      font-size: 1.25rem;
+      transition: 0.3s ease-in-out;
+      width: 100%;
+      max-width: 420px;
+      padding: 14px 24px;
+      display: block;
+      margin: 20px auto 0 auto;
+      text-transform: uppercase;
     }
 
-    /* 🔶 Responsividade para telas menores (celulares pequenos) */
+    .cta-btn:hover {
+      background-color: #1e8a4d;
+      border-color: #1e8a4d;
+      transform: scale(1.03);
+    }
+
+    /* 🔶 Responsividade */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      h3 { font-size: 1.4rem; }
+      .lead { font-size: 1.05rem; }
+      .price { font-size: 2rem; }
+      .box { padding: 40px 20px; margin: 0 10px; }
+      nav span { font-size: 0.95rem; display: block; }
+      .cta-btn { font-size: 1.05rem; padding: 13px 20px; }
+    }
+
     @media (max-width: 480px) {
       h1 { font-size: 1.9rem; }
-      h3 { font-size: 1.3rem; }
       .lead { font-size: 1rem; }
-      .btn-primary { font-size: 1rem; padding: 14px 25px; }
+      .cta-btn { font-size: 1rem; padding: 12px 18px; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- 🔶 Barra superior de aviso -->
+  <!-- 🔶 Barra de aviso -->
   <nav class="navbar text-white justify-content-center text-center py-3">
     <span>⚠️ NÃO FECHE OU ATUALIZE ESSA PÁGINA! LEIA ATENTAMENTE A MENSAGEM ABAIXO:</span>
   </nav>
 
-  <!-- 🔶 Container principal -->
+  <!-- 🔶 Conteúdo principal -->
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10 box">
 
-        <!-- 🔶 Título e introdução -->
         <h1>⚡ ESPERE!</h1>
         <p class="lead"><span class="highlight">VOCÊ ESTÁ PRESTES A PERDER UMA OPORTUNIDADE ÚNICA!</span></p>
         <h3>“E SE VOCÊ PUDESSE ACELERAR AINDA MAIS SEUS RESULTADOS NA SUA JORNADA?”</h3>
 
-        <!-- 🔶 Apresentação pessoal -->
         <p class="lead">EI, AQUI É O <span class="highlight under">JHONATAS</span>, CRIADOR DA COMUNIDADE <span class="highlight">A TRILHA</span>.</p>
         <p class="lead">ANTES DE LIBERAR SEU ACESSO COMPLETO, EU QUERO TE MOSTRAR ALGO QUE PODE <span class="highlight">MUDAR COMPLETAMENTE SUA EVOLUÇÃO</span>.</p>
 
-        <!-- 🔶 Identificação de produtos já adquiridos -->
         <p class="lead">VOCÊ JÁ ESTÁ DENTRO DE UM DOS PROGRAMAS — <span class="highlight">COMEÇANDO A TRILHA</span>, <span class="highlight">DESAFIO 7 DIAS CAMINHO CLARO</span> OU <span class="highlight">TRILHA PRO</span>.</p>
         <p class="lead">E POR ISSO, VOCÊ TEM ACESSO A ALGO AINDA MAIS PODEROSO.</p>
 
-        <!-- 🔶 Oferta da call -->
         <h3 class="under">CALL INDIVIDUAL COM JHONATAS</h3>
         <p class="lead">UMA SESSÃO EXCLUSIVA AO VIVO, PARA TE AJUDAR A <span class="highlight">DESTRAVAR O QUE ESTÁ TRAVANDO</span>, ALINHAR SUA ESTRATÉGIA E CLAREAR OS PRÓXIMOS PASSOS.</p>
         <p class="lead">VAMOS ANALISAR JUNTOS SUA CAMINHADA, E DEFINIR COMO VOCÊ PODE CRESCER COM DIREÇÃO — SEM ADIVINHAR O CAMINHO.</p>
 
-        <!-- 🔶 Preço e urgência -->
         <h3 class="highlight">🔥 OFERTA RELÂMPAGO EXCLUSIVA PARA ALUNOS</h3>
         <p class="lead">NORMALMENTE ESSA CALL CUSTA <span class="highlight">R$497</span>, MAS COMO VOCÊ JÁ É ALUNO...</p>
         <p class="lead">HOJE, SOMENTE NESTA PÁGINA, VOCÊ PODE GARANTIR POR APENAS:</p>
         <p class="price">R$197</p>
         <p class="lead">💡 E O MELHOR: VOCÊ PODE MARCAR QUANDO QUISER — AGORA OU QUANDO PRECISAR DE AJUDA NA SUA JORNADA.</p>
 
-        <!-- 🔶 BOTÃO KIWIFY (UPSELL E DOWNSELL) -->
-        <div id="cta" class="my-4">
-          <!-- 🔹 Este bloco é o botão que ativa o upsell Kiwify -->
-          <div style="text-align:center" id="kiwify-upsell-oc9Xfzu" data-upsell-url="" data-downsell-url="">
-            <!-- Botão principal verde -->
-            <button id="kiwify-upsell-trigger-oc9Xfzu" style="background-color:#27AF60;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #27AF60;font-size:20px;">
+        <!-- 🔶 Botão Kiwify -->
+        <div id="cta" class="my-4 text-center">
+          <div id="kiwify-upsell-oc9Xfzu" data-upsell-url="" data-downsell-url="">
+            <button id="kiwify-upsell-trigger-oc9Xfzu" class="cta-btn">
               SIM, QUERO GARANTIR MINHA CALL EXCLUSIVA!
             </button>
 
-            <!-- Botão secundário de recusa -->
-            <div id="kiwify-upsell-cancel-trigger-oc9Xfzu" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">
+            <div id="kiwify-upsell-cancel-trigger-oc9Xfzu"
+                 style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;
+                        font-family:sans-serif;color:#e2c9a0;">
               NÃO, PREFIRO SEGUIR SEM ESSA OPORTUNIDADE
             </div>
           </div>
-
-          <!-- Script da Kiwify -->
           <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
         </div>
 
-        <!-- 🔶 Explicação do motivo -->
         <p class="lead"><span class="highlight">POR QUE ESTOU FAZENDO ISSO?</span></p>
         <p class="lead">PORQUE EU SEI QUE, ÀS VEZES, O QUE FALTA NÃO É ESFORÇO — É <span class="highlight under">DIREÇÃO</span>.</p>
         <p class="lead">E UMA CONVERSA CERTA, NO MOMENTO CERTO, PODE <span class="highlight">MUDAR COMPLETAMENTE O JOGO</span>.</p>
 
-        <!-- 🔶 Aviso de urgência -->
-        <p class="lead font-italic">⚠️ ESSA É UMA OFERTA ÚNICA E EXCLUSIVA DESTA PÁGINA.  
-        VOCÊ NÃO VERÁ NOVAMENTE EM OUTRO MOMENTO.</p>
+        <p class="lead font-italic">⚠️ ESSA É UMA OFERTA ÚNICA E EXCLUSIVA DESTA PÁGINA. VOCÊ NÃO VERÁ NOVAMENTE EM OUTRO MOMENTO.</p>
 
-        <!-- 🔶 Botão extra alternativo -->
-          <a href="#cta" class="btn btn-lg btn-success py-3 px-5 mb-0">SIM, QUERO APROVEITAR AGORA!</a>
-        <!-- 🔶 Rodapé da caixa -->
+        <!-- 🔶 Segundo botão (idêntico ao primeiro) -->
+        <a href="#cta" class="cta-btn text-center">
+          SIM, QUERO APROVEITAR AGORA!
+        </a>
+
         <p class="footer-note">
           ESSA É SUA CHANCE DE CAMINHAR COMIGO DE PERTO — E TRANSFORMAR SUA JORNADA EM RESULTADOS REAIS.
         </p>
@@ -209,8 +179,5 @@
       </div>
     </div>
   </div>
-
-  <!-- Script adicional (não obrigatório, já incluso no Kiwify acima) -->
-  <script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
 </body>
 </html>

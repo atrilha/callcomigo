@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Codificação e responsividade -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Título -->
+  <title>Upsell - A Trilha</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 🔶 Fundo e base */
+    body {
+      background-image: url("bg.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: #3a2d27;
+      background-blend-mode: multiply;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* 🔶 Barra superior */
+    nav {
+      background-color: #6a4e3a !important;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* 🔶 Títulos */
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 { font-size: 2.8rem; color: #d9b166; margin-bottom: 20px; }
+    h3 { color: #f7d99e; margin-bottom: 20px; }
+
+    .lead {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    .highlight { color: #f7d99e; font-weight: 700; text-transform: uppercase; }
+    .under { text-decoration: underline; text-underline-offset: 3px; }
+    .price { font-size: 2.4rem; font-weight: 800; color: #d9b166; margin-bottom: 20px; }
+
+    .footer-note {
+      color: #e8d9c1;
+      font-size: 1.1rem;
+      margin-top: 30px;
+    }
+
+    .box {
+      background-color: rgba(74, 54, 38, 0.9);
+      border-radius: 20px;
+      padding: 50px 30px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    /* 🔶 Botão Kiwify e botão secundário */
+    .cta-btn {
+      background-color: #27AF60;
+      border: 1px solid #27AF60;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 6px;
+      font-size: 1.25rem;
+      transition: 0.3s ease-in-out;
+      width: 100%;
+      max-width: 420px;
+      padding: 14px 24px;
+      display: block;
+      margin: 20px auto 0 auto;
+      text-transform: uppercase;
+    }
+
+    .cta-btn:hover {
+      background-color: #1e8a4d;
+      border-color: #1e8a4d;
+      transform: scale(1.03);
+    }
+
+    /* 🔶 Responsividade */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      h3 { font-size: 1.4rem; }
+      .lead { font-size: 1.05rem; }
+      .price { font-size: 2rem; }
+      .box { padding: 40px 20px; margin: 0 10px; }
+      nav span { font-size: 0.95rem; display: block; }
+      .cta-btn { font-size: 1.05rem; padding: 13px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.9rem; }
+      .lead { font-size: 1rem; }
+      .cta-btn { font-size: 1rem; padding: 12px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔶 Barra de aviso -->
+  <nav class="navbar text-white justify-content-center text-center py-3">
+    <span>⚠️ VAMOS AGENDAR SUA CALL AGORA!:</span>
+  </nav>
+
+  <!-- 🔶 Conteúdo principal -->
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 box">
+
+        <h1>⚡FALE COM NOSSO TIME</h1>
+        <p class="lead"><span class="highlight">CLIQUE NO BOTÃO ABAIXO PARA AGENDAR SUA CALL</span></p>
+        
+        <!-- 🔶 Botão Kiwify -->
+        <div id="cta" class="my-4 text-center">
+<button 
+onclick="window.location.href='https://wa.link/rf10fz'"
+  class="cta-btn">
+  AGENDAR CALL COMIGO!
+</button>
+
+          </div>
+          <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+        </div>
+
+        <p class="footer-note">
+          ESSA É SUA CHANCE DE CAMINHAR COMIGO DE PERTO — E TRANSFORMAR SUA JORNADA EM RESULTADOS REAIS.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
